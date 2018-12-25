@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "568962233431",
+    "firebase_url": "https://mobile-ok.firebaseio.com",
+    "project_id": "mobile-ok",
+    "storage_bucket": "mobile-ok.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568962233431:android:5003c75d79997f6a",
+        "android_client_info": {
+          "package_name": "com.OK"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568962233431-qq5b55a5poch6b536dv5esenb6mo9pmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmhWVyO2_P4KF6ZsIDAQOJuO0nSqUc1zc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
