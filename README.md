@@ -26,4 +26,4 @@ Open `android` directory in Android studio. Click green triangle button and sele
 
 IOS
 
-Open `OK.xcodeproj` file in xCode. Click triangle button and select a device you want to run the app on.
+Open `ios/OK.xcodeproj` file in xCode. Click triangle button and select a device you want to run the app on.
