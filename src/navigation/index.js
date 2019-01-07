@@ -1,4 +1,4 @@
-import { createStackNavigator } from 'react-navigation'
+import { createStackNavigator, createAppContainer } from 'react-navigation'
 
 import Home from './../modules/Home'
 import Card from './../modules/Card'
@@ -10,4 +10,5 @@ const AppStack = createStackNavigator({
   Settings
 })
 
-export default AppStack
+const AppContainer = createAppContainer(AppStack)
+export default AppContainer

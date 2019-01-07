@@ -5,6 +5,6 @@ import styles from './styles'
 
 export default props => (
   <View>
-    <Text>Home</Text>
+    <Text>Settings</Text>
   </View>
 )
