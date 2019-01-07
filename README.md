@@ -26,4 +26,10 @@ Open `android` directory in Android studio. Click green triangle button and sele
 
 IOS
 
-Open `ios/OK.xcodeproj` file in xCode. Click triangle button and select a device you want to run the app on.
+install dependencies
+```
+cd ios
+pod install
+```
+
+Open `ios/OK.xcworkspace` file in xCode. Click triangle button and select a device you want to run the app on.
