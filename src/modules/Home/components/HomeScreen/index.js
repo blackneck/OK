@@ -1,10 +1,6 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 
 import styles from './styles'
 
-export default props => (
-  <View>
-    <Text>Home</Text>
-  </View>
-)
+export default () => <View style={{ flex: 1 }} />
