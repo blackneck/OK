@@ -1,11 +1,11 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 
-import Home from './../modules/Home'
-import Card from './../modules/Card'
-import Settings from './../modules/Settings'
-import Schedule from './../modules/Settings/containers/ScheduleContainer'
+import Home from 'modules/Home'
+import Card from 'modules/Card'
+import Settings from 'modules/Settings'
+import Schedule from 'modules/Settings/containers/ScheduleContainer'
 
-import { DARK_SECTION } from 'const/colors'
+import { DARK_FOREGROUND, DARK_LABEL } from 'const/colors'
 
 const AppStack = createStackNavigator(
   {
@@ -16,9 +16,10 @@ const AppStack = createStackNavigator(
   },
   {
     defaultNavigationOptions: {
-      headerTintColor: '#aaa',
+      headerTintColor: DARK_LABEL,
       headerStyle: {
-        backgroundColor: DARK_SECTION
+        backgroundColor: DARK_FOREGROUND,
+        borderBottomColor: '#353535'
       }
     }
   }

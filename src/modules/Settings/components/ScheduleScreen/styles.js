@@ -1,6 +1,6 @@
 import { StyleSheet, Platform } from 'react-native'
 
-import { DARK_BACKGROUND, DARK_SECTION } from 'const/colors'
+import { DARK_BACKGROUND, DARK_FOREGROUND, DARK_LABEL } from 'const/colors'
 
 export default StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ export default StyleSheet.create({
     flex: 1
   },
   iosPickerItem: {
-    color: '#aaa'
+    color: DARK_LABEL
   },
   pickersContainer: {
     flex: 1,
@@ -31,15 +31,12 @@ export default StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 17,
-    fontWeight: '500',
-    color: '#aaa'
-  },
-  redLabel: {
-    color: '#fc3d39'
+    color: DARK_LABEL,
+    fontWeight: '500'
   },
   section: {
     paddingVertical: 10,
-    backgroundColor: DARK_SECTION,
+    backgroundColor: DARK_FOREGROUND,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     ...Platform.select({
@@ -47,5 +44,13 @@ export default StyleSheet.create({
       ios: { borderColor: '#141414' }
     }),
     alignItems: 'center'
+  },
+  cancelButton: {
+    paddingVertical: 10,
+    alignSelf: 'center'
+  },
+  cancelLabel: {
+    fontSize: 17,
+    color: '#fc3d39'
   }
 })

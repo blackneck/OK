@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { StatusBar } from 'react-native'
 import firebase from 'react-native-firebase'
 
-import Navigator from './src/navigation'
+import Navigator from 'app/navigation'
+import { DARK_FOREGROUND } from 'const/colors'
 
 class App extends Component {
   async componentDidMount() {
@@ -20,7 +22,12 @@ class App extends Component {
   }
 
   render() {
-    return <Navigator />
+    return (
+      <>
+        <StatusBar barStyle="light-content" backgroundColor={DARK_FOREGROUND} />
+        <Navigator />
+      </>
+    )
   }
 }
 

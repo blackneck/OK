@@ -1,10 +1,10 @@
 import React from 'react'
-import { View, Text, TouchableHighlight } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { WheelPicker } from 'react-native-wheel-picker-android'
 import PropTypes from 'prop-types'
 
 import { frequencyValues, minutes, hours } from 'const/time&FrequencyLabels'
-import { BUTTON_UNDERLAY } from 'const/colors'
+import { DARK_LABEL } from 'const/colors'
 import styles from './styles'
 
 const scheduleScreen = ({
@@ -25,7 +25,7 @@ const scheduleScreen = ({
           style={styles.timePicker}
           itemStyle={styles.iosPickerItem}
           indicatorColor="#353535"
-          selectedItemTextColor="#aaaaaa"
+          selectedItemTextColor={DARK_LABEL}
           selectedItem={hour}
           onItemSelected={onHourSelected}
         />
@@ -35,7 +35,7 @@ const scheduleScreen = ({
           style={styles.timePicker}
           itemStyle={styles.iosPickerItem}
           indicatorColor="#353535"
-          selectedItemTextColor="#aaaaaa"
+          selectedItemTextColor={DARK_LABEL}
           selectedItem={minute}
           onItemSelected={onMinuteSelected}
         />
@@ -50,19 +50,13 @@ const scheduleScreen = ({
         style={styles.frequencyPicker}
         itemStyle={styles.iosPickerItem}
         indicatorColor="#353535"
-        selectedItemTextColor="#aaaaaa"
+        selectedItemTextColor={DARK_LABEL}
         selectedItem={frequency}
         onItemSelected={onFrequencySelected}
       />
-      <TouchableHighlight
-        style={styles.section}
-        underlayColor={BUTTON_UNDERLAY}
-        onPress={onCancel}
-      >
-        <Text style={[styles.sectionTitle, styles.redLabel]}>
-          Cancel Notifications
-        </Text>
-      </TouchableHighlight>
+      <TouchableOpacity style={styles.cancelButton} onPress={onCancel}>
+        <Text style={styles.cancelLabel}>Cancel Notifications</Text>
+      </TouchableOpacity>
     </View>
   </View>
 )

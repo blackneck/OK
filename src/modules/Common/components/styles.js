@@ -1,17 +1,16 @@
 import { StyleSheet } from 'react-native'
 
-import { ORANGE_LABEL, DARK_SECTION } from '../../../constants/colors'
+import { ORANGE_LABEL, DARK_FOREGROUND } from '../../../constants/colors'
 
 export default StyleSheet.create({
   header: {
-    backgroundColor: DARK_SECTION
+    backgroundColor: DARK_FOREGROUND
   },
   headerButtonContainer: {
     marginHorizontal: 20
   },
   headerButtonLabel: {
     fontSize: 17,
-    fontWeight: '900',
     color: ORANGE_LABEL
   }
 })

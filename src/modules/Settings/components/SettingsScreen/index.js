@@ -3,7 +3,7 @@ import { View, Text, TouchableHighlight, ScrollView } from 'react-native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import PropTypes from 'prop-types'
 
-import { BUTTON_UNDERLAY } from 'const/colors'
+import { DARK_HIGHLIGHT } from 'const/colors'
 import styles from './styles'
 
 const SettingsScreen = ({ navigateSchedule }) => (
@@ -11,7 +11,7 @@ const SettingsScreen = ({ navigateSchedule }) => (
     <ScrollView style={styles.settingsList}>
       <TouchableHighlight
         onPress={navigateSchedule}
-        underlayColor={BUTTON_UNDERLAY}
+        underlayColor={DARK_HIGHLIGHT}
       >
         <View style={styles.sectionContainer}>
           <Text style={styles.sectionLabel}>Schedule Notifications</Text>

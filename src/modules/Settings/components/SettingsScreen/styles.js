@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { DARK_BACKGROUND, DARK_SECTION } from 'const/colors'
+import { DARK_BACKGROUND, DARK_FOREGROUND, DARK_LABEL } from 'const/colors'
 
 export default StyleSheet.create({
   container: {
@@ -18,11 +18,18 @@ export default StyleSheet.create({
     paddingVertical: 10,
     paddingLeft: 30,
     paddingRight: 20,
-    backgroundColor: DARK_SECTION,
+    backgroundColor: DARK_FOREGROUND,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: '#353535'
   },
-  sectionLabel: { color: '#aaa', fontWeight: '500' },
-  iconRight: { color: '#aaaaaa', fontSize: 17 }
+  sectionLabel: {
+    color: DARK_LABEL,
+    fontSize: 17,
+    fontWeight: '500'
+  },
+  iconRight: {
+    color: DARK_LABEL,
+    fontSize: 17
+  }
 })
