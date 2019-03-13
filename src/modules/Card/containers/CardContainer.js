@@ -13,6 +13,7 @@ export default class Card extends React.Component {
   onRefresh = () => {
     this.setState(prevState => ({
       current: prevState.current + 1
+      // Math.floor(Math.random() * (prevState.uris.length - 0 + 1) + 0)
     }))
   }
 
