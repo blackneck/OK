@@ -4,16 +4,19 @@ import PropTypes from 'prop-types'
 import SettingsScreen from './../components/SettingsScreen'
 
 class SettingsContainer extends Component {
-  static navigationOptions = {
-    title: 'Settings'
-  }
-
-  navigateSchedule = () => {
+  navigateToSchedule = () => {
     this.props.navigation.navigate('Schedule')
   }
 
+  goBack = () => this.props.navigation.goBack()
+
   render() {
-    return <SettingsScreen navigateSchedule={this.navigateSchedule} />
+    return (
+      <SettingsScreen
+        navigateToSchedule={this.navigateToSchedule}
+        goBack={this.goBack}
+      />
+    )
   }
 }
 

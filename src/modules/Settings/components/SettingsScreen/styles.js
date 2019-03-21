@@ -1,9 +1,10 @@
 import { StyleSheet } from 'react-native'
 
-import { DARK_BACKGROUND, DARK_FOREGROUND, DARK_LABEL } from 'const/colors'
+import { DARK_BACKGROUND, DARK_FOREGROUND, DARK_LABEL } from 'app/constants/styles/colors'
 
 export default StyleSheet.create({
   container: {
+    paddingTop: 40,
     flex: 1,
     backgroundColor: DARK_BACKGROUND
   },

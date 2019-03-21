@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native'
 
 import NotificationManager from 'modules/NotificationManager'
 import Navigator from 'app/navigation'
-import { DARK_FOREGROUND } from 'const/colors'
+import { DARK_FOREGROUND } from 'app/constants/styles/colors'
 
 class App extends Component {
   render() {

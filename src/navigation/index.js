@@ -5,22 +5,16 @@ import Card from 'modules/Card'
 import Settings from 'modules/Settings'
 import Schedule from 'modules/Settings/containers/ScheduleContainer'
 
-import { DARK_FOREGROUND, DARK_LABEL } from 'const/colors'
-
 const AppStack = createStackNavigator(
   {
-    Settings,
-    Schedule,
     Home,
-    Card
+    Card,
+    Settings,
+    Schedule
   },
   {
     defaultNavigationOptions: {
-      headerTintColor: DARK_LABEL,
-      headerStyle: {
-        backgroundColor: DARK_FOREGROUND,
-        borderBottomColor: '#353535'
-      }
+      header: null
     }
   }
 )

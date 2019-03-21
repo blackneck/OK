@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native'
 
-import { DARK_BACKGROUND, ORANGE_LABEL } from 'const/colors'
+import { DARK_BACKGROUND, ORANGE_LABEL } from 'app/constants/styles/colors'
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: DARK_BACKGROUND
+    backgroundColor: DARK_BACKGROUND,
+    paddingTop: 40
   },
   image: {
     flex: 1,

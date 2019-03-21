@@ -5,20 +5,9 @@ import {
   scheduleNotification,
   cancelNotifications
 } from 'app/services/Scheduler'
-import HeaderRightButton from 'common/components/HeaderButtonRight'
 import { frequencyValues } from 'const/time&FrequencyLabels'
 
 class ScheduleContainer extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Schedule Notifications',
-    headerRight: (
-      <HeaderRightButton
-        onPress={(navigation.state.params || {}).onSave}
-        label="Save"
-      />
-    )
-  })
-
   state = {
     hour: 0,
     minute: 0,
@@ -59,6 +48,8 @@ class ScheduleContainer extends Component {
     this.setState({ frequency })
   }
 
+  goBack = () => this.props.navigation.goBack()
+
   render() {
     const { minute, hour, frequency } = this.state
     return (
@@ -70,6 +61,7 @@ class ScheduleContainer extends Component {
         hour={hour}
         frequency={frequency}
         onCancel={this.onCancel}
+        goBack={this.goBack}
       />
     )
   }

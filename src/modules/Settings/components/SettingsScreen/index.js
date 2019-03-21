@@ -3,14 +3,15 @@ import { View, Text, TouchableHighlight, ScrollView } from 'react-native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import PropTypes from 'prop-types'
 
-import { DARK_HIGHLIGHT } from 'const/colors'
+import { DARK_HIGHLIGHT } from 'app/constants/styles/colors'
+import BackButton from 'modules/Common/components/HeaderBackButton'
 import styles from './styles'
 
-const SettingsScreen = ({ navigateSchedule }) => (
+const SettingsScreen = ({ navigateToSchedule, goBack }) => (
   <View style={styles.container}>
     <ScrollView style={styles.settingsList}>
       <TouchableHighlight
-        onPress={navigateSchedule}
+        onPress={navigateToSchedule}
         underlayColor={DARK_HIGHLIGHT}
       >
         <View style={styles.sectionContainer}>
@@ -19,11 +20,13 @@ const SettingsScreen = ({ navigateSchedule }) => (
         </View>
       </TouchableHighlight>
     </ScrollView>
+    <BackButton goBack={goBack} />
   </View>
 )
 
 SettingsScreen.propTypes = {
-  navigateSchedule: PropTypes.func
+  navigateToSchedule: PropTypes.func,
+  goBack: PropTypes.func
 }
 
 export default SettingsScreen

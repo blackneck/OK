@@ -1,4 +1,7 @@
 import React from 'react'
+import { Share } from 'react-native'
+// import Share from 'react-native-share'
+import RNFetchBlob from 'rn-fetch-blob'
 
 import CardScreen from './../components/CardScreen'
 import { getImages } from 'app/services/Scrapper'
@@ -10,10 +13,9 @@ export default class Card extends React.Component {
     refreshPressedIn: false
   }
 
-  onRefresh = () => {
+  refresh = () => {
     this.setState(prevState => ({
-      current: prevState.current + 1
-      // Math.floor(Math.random() * (prevState.uris.length - 0 + 1) + 0)
+      current: Math.floor(Math.random() * (prevState.uris.length - 0 + 1) + 0)
     }))
   }
 
@@ -25,6 +27,15 @@ export default class Card extends React.Component {
     this.setState(() => ({ refreshPressedIn: false }))
   }
 
+  share = async () => {
+    const res = await RNFetchBlob.fetch(
+      'GET',
+      this.state.uris[this.state.current]
+    )
+
+    Share.share({ url: `data:image/gif;base64,${res.base64()}` })
+  }
+
   async componentDidMount() {
     const uris = await getImages()
     this.setState(() => ({
@@ -32,15 +43,19 @@ export default class Card extends React.Component {
     }))
   }
 
+  goBack = () => this.props.navigation.goBack()
+
   render() {
     const { uris, current, refreshPressedIn } = this.state
     return (
       <CardScreen
         refreshPressedIn={refreshPressedIn}
         foreground={uris[current]}
-        onRefresh={this.onRefresh}
+        onRefresh={this.refresh}
         onPressOut={this.onPressOut}
         onPressIn={this.onPressIn}
+        goBack={this.goBack}
+        onShare={this.share}
       />
     )
   }
