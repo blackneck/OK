@@ -4,7 +4,7 @@ import ScheduleScreen from './../components/ScheduleScreen'
 import {
   scheduleNotification,
   cancelNotifications
-} from 'app/services/Scheduler'
+} from './../../../common/Notifications/services'
 import HeaderRightButton from 'app/common/components/HeaderButtonRight'
 import { frequencyValues } from 'const/time&FrequencyLabels'
 

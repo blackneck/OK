@@ -1,6 +1,6 @@
 import firebase from 'react-native-firebase'
 
-import { frequencyValues } from './../../constants/time&FrequencyLabels'
+import { frequencyValues } from './../../../constants/time&FrequencyLabels'
 
 export const scheduleNotification = ({ hour, minute, frequency }) => {
   const date = new Date()
@@ -25,8 +25,4 @@ export const scheduleNotification = ({ hour, minute, frequency }) => {
     repeatInterval: frequencyValues[frequency],
     exact: true
   })
-}
-
-export const cancelNotifications = () => {
-  firebase.notifications().cancelNotification('repeated')
 }
