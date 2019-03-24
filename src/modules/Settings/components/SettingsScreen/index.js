@@ -3,7 +3,7 @@ import { View, Text, TouchableHighlight, ScrollView } from 'react-native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import PropTypes from 'prop-types'
 
-import { BUTTON_UNDERLAY } from 'const/colors'
+import { BUTTON_UNDERLAY } from './../../../../common/styles/colors'
 import styles from './styles'
 
 const SettingsScreen = ({ navigateSchedule }) => (

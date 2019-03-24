@@ -5,7 +5,7 @@ import {
   scheduleNotification,
   cancelNotifications
 } from 'app/services/Scheduler'
-import HeaderRightButton from 'app/modules/Common/components/HeaderButtonRight'
+import HeaderRightButton from 'app/common/components/HeaderButtonRight'
 import { frequencyValues } from 'const/time&FrequencyLabels'
 
 class ScheduleContainer extends Component {

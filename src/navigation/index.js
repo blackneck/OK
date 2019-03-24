@@ -5,7 +5,7 @@ import Card from './../modules/Card'
 import Settings from './../modules/Settings'
 import Schedule from './../modules/Settings/containers/ScheduleContainer'
 
-import { DARK_SECTION } from 'const/colors'
+import { DARK_SECTION } from './../common/styles/colors'
 
 const AppStack = createStackNavigator(
   {

@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native'
 
-import { DARK_BACKGROUND, DARK_SECTION } from 'const/colors'
+import {
+  DARK_BACKGROUND,
+  DARK_SECTION
+} from './../../../../common/styles/colors'
 
 export default StyleSheet.create({
   container: {

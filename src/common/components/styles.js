@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { ORANGE_LABEL, DARK_SECTION } from '../../../constants/colors'
+import { ORANGE_LABEL, DARK_SECTION } from './../../common/styles/colors'
 
 export default StyleSheet.create({
   header: {

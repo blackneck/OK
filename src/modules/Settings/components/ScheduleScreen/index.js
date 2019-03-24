@@ -4,7 +4,7 @@ import { WheelPicker } from 'react-native-wheel-picker-android'
 import PropTypes from 'prop-types'
 
 import { frequencyValues, minutes, hours } from 'const/time&FrequencyLabels'
-import { BUTTON_UNDERLAY } from 'const/colors'
+import { BUTTON_UNDERLAY } from './../../../../common/styles/colors'
 import styles from './styles'
 
 const scheduleScreen = ({
