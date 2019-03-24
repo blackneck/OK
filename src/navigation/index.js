@@ -3,12 +3,26 @@ import { createStackNavigator, createAppContainer } from 'react-navigation'
 import Home from './../modules/Home'
 import Card from './../modules/Card'
 import Settings from './../modules/Settings'
+import Schedule from './../modules/Settings/containers/ScheduleContainer'
 
-const AppStack = createStackNavigator({
-  Home,
-  Card,
-  Settings
-})
+import { DARK_SECTION } from './../common/styles/colors'
+
+const AppStack = createStackNavigator(
+  {
+    Settings,
+    Schedule,
+    Home,
+    Card
+  },
+  {
+    defaultNavigationOptions: {
+      headerTintColor: '#aaa',
+      headerStyle: {
+        backgroundColor: DARK_SECTION
+      }
+    }
+  }
+)
 
 const AppContainer = createAppContainer(AppStack)
 export default AppContainer

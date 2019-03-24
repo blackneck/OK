@@ -26,7 +26,7 @@ Open `android` directory in Android studio. Click green triangle button and sele
 
 IOS
 
-install dependencies
+Install pods
 ```
 cd ios
 pod install
