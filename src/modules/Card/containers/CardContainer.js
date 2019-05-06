@@ -4,18 +4,18 @@ import { Share } from 'react-native'
 import RNFetchBlob from 'rn-fetch-blob'
 
 import CardScreen from './../components/CardScreen'
-import { getImages } from 'app/services/Scrapper'
+import getImages from './../helpers/scrapWebPage'
 
 export default class Card extends React.Component {
   state = {
     uris: [],
     current: 0,
-    refreshPressedIn: false
+    refreshPressedIn: false,
   }
 
   refresh = () => {
-    this.setState(prevState => ({
-      current: Math.floor(Math.random() * (prevState.uris.length - 0 + 1) + 0)
+    this.setState((prevState) => ({
+      current: Math.floor(Math.random() * (prevState.uris.length - 0 + 1) + 0),
     }))
   }
 
@@ -30,7 +30,7 @@ export default class Card extends React.Component {
   share = async () => {
     const res = await RNFetchBlob.fetch(
       'GET',
-      this.state.uris[this.state.current]
+      this.state.uris[this.state.current],
     )
 
     Share.share({ url: `data:image/gif;base64,${res.base64()}` })
@@ -39,7 +39,7 @@ export default class Card extends React.Component {
   async componentDidMount() {
     const uris = await getImages()
     this.setState(() => ({
-      uris
+      uris,
     }))
   }
 

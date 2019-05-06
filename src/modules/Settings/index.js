@@ -1,2 +1,3 @@
 import Settings from './containers/SettingsContainer'
-export default Settings
+import Schedule from './containers/ScheduleContainer'
+export { Settings, Schedule }

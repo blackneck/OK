@@ -4,7 +4,7 @@ import ScheduleScreen from './../components/ScheduleScreen'
 import {
   scheduleNotification,
   cancelNotifications,
-} from 'app/services/Scheduler'
+} from 'common/NotificationsManager/helpers'
 import { FREQUENCY_VALUES } from 'common/constants/'
 
 class ScheduleContainer extends Component {
