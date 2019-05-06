@@ -10,8 +10,7 @@
         "alias": {
           "modules": "./src/modules",
           "app": "./src",
-          "common": "./src/modules/Common",
-          "const": "./src/constants"
+          "common": "./src/common"
         }
       }
     ]

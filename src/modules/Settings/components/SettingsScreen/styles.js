@@ -1,16 +1,20 @@
 import { StyleSheet } from 'react-native'
 
-import { DARK_BACKGROUND, DARK_FOREGROUND, DARK_LABEL } from 'app/constants/styles/colors'
+import {
+  DARK_BACKGROUND,
+  DARK_FOREGROUND,
+  DARK_LABEL,
+} from 'common/styles/colors'
 
 export default StyleSheet.create({
   container: {
     paddingTop: 40,
     flex: 1,
-    backgroundColor: DARK_BACKGROUND
+    backgroundColor: DARK_BACKGROUND,
   },
   settingsList: {
     flex: 1,
-    marginTop: 70
+    marginTop: 70,
   },
   sectionContainer: {
     flexDirection: 'row',
@@ -22,15 +26,15 @@ export default StyleSheet.create({
     backgroundColor: DARK_FOREGROUND,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: '#353535'
+    borderColor: '#353535',
   },
   sectionLabel: {
     color: DARK_LABEL,
     fontSize: 17,
-    fontWeight: '500'
+    fontWeight: '500',
   },
   iconRight: {
     color: DARK_LABEL,
-    fontSize: 17
-  }
+    fontSize: 17,
+  },
 })

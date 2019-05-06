@@ -1,0 +1,2 @@
+import NotificationsManagerContainer from './containers/NotificationsManagerContainer'
+export default NotificationsManagerContainer

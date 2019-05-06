@@ -3,7 +3,7 @@ import { View, Image, TouchableOpacity } from 'react-native'
 import Icon from 'react-native-vector-icons/Foundation'
 
 import styles from './styles'
-import BackButton from 'app/modules/Common/components/HeaderBackButton'
+import BackButton from 'common/HeaderBackButton'
 
 export default ({
   foreground,
@@ -12,7 +12,7 @@ export default ({
   refreshPressedIn,
   onPressIn,
   goBack,
-  onShare
+  onShare,
 }) => (
   <View style={styles.container}>
     <Image

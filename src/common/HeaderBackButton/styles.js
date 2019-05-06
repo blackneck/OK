@@ -1,17 +1,17 @@
 import { StyleSheet, Platform } from 'react-native'
 
-import { PINK_LABEL } from '../../../constants/styles/colors'
+import { PINK_LABEL } from 'common/styles/colors'
 
 export default StyleSheet.create({
   headerButtonLeft: {
     position: 'absolute',
     ...Platform.select({
       ios: {
-        top: 40
+        top: 40,
       },
       android: {
-        top: 20
-      }
+        top: 20,
+      },
     }),
     left: 20,
     width: 40,
@@ -20,11 +20,11 @@ export default StyleSheet.create({
     backgroundColor: PINK_LABEL,
     justifyContent: 'center',
     alignItems: 'center',
-    opacity: 0.8
+    opacity: 0.8,
   },
   headerButtonText: {
     fontSize: 20,
     color: 'white',
-    alignSelf: 'center'
-  }
+    alignSelf: 'center',
+  },
 })

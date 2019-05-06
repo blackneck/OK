@@ -1,6 +1,6 @@
 import firebase from 'react-native-firebase'
 
-import { frequencyValues } from './../../constants/time&FrequencyLabels'
+import { frequencyValues } from 'app/constants/time&FrequencyLabels'
 
 export const scheduleNotification = ({ hour, minute, frequency }) => {
   const date = new Date()
@@ -14,7 +14,7 @@ export const scheduleNotification = ({ hour, minute, frequency }) => {
   const channel = new firebase.notifications.Android.Channel(
     'general',
     'General Channel',
-    firebase.notifications.Android.Importance.Max
+    firebase.notifications.Android.Importance.Max,
   ).setDescription('general channel')
   firebase.notifications().android.createChannel(channel)
 
@@ -23,7 +23,7 @@ export const scheduleNotification = ({ hour, minute, frequency }) => {
   firebase.notifications().scheduleNotification(notification, {
     fireDate: date.getTime(),
     repeatInterval: frequencyValues[frequency],
-    exact: true
+    exact: true,
   })
 }
 

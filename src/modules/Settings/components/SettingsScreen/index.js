@@ -3,8 +3,8 @@ import { View, Text, TouchableHighlight, ScrollView } from 'react-native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import PropTypes from 'prop-types'
 
-import { DARK_HIGHLIGHT } from 'app/constants/styles/colors'
-import BackButton from 'modules/Common/components/HeaderBackButton'
+import { DARK_HIGHLIGHT } from 'common/styles/colors'
+import BackButton from 'common/HeaderBackButton'
 import styles from './styles'
 
 const SettingsScreen = ({ navigateToSchedule, goBack }) => (
@@ -26,7 +26,7 @@ const SettingsScreen = ({ navigateToSchedule, goBack }) => (
 
 SettingsScreen.propTypes = {
   navigateToSchedule: PropTypes.func,
-  goBack: PropTypes.func
+  goBack: PropTypes.func,
 }
 
 export default SettingsScreen

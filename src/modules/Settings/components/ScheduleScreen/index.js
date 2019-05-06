@@ -3,9 +3,13 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import { WheelPicker } from 'react-native-wheel-picker-android'
 import PropTypes from 'prop-types'
 
-import BackButton from 'modules/Common/components/HeaderBackButton'
-import { frequencyValues, minutes, hours } from 'const/time&FrequencyLabels'
-import { DARK_LABEL } from 'app/constants/styles/colors'
+import BackButton from 'common/HeaderBackButton'
+import {
+  frequencyValues,
+  minutes,
+  hours,
+} from 'app/constants/time&FrequencyLabels'
+import { DARK_LABEL } from 'common/styles/colors'
 import styles from './styles'
 
 const scheduleScreen = ({
@@ -16,7 +20,7 @@ const scheduleScreen = ({
   hour,
   frequency,
   onCancel,
-  goBack
+  goBack,
 }) => (
   <View style={styles.container}>
     <View style={styles.timeContainer}>
@@ -71,7 +75,7 @@ scheduleScreen.propTypes = {
   minute: PropTypes.number,
   hour: PropTypes.number,
   frequency: PropTypes.number,
-  onCancel: PropTypes.func
+  onCancel: PropTypes.func,
 }
 
 export default scheduleScreen

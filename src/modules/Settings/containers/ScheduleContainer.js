@@ -5,7 +5,7 @@ import {
   scheduleNotification,
   cancelNotifications
 } from 'app/services/Scheduler'
-import { frequencyValues } from 'const/time&FrequencyLabels'
+import { frequencyValues } from 'app/constants/time&FrequencyLabels'
 
 class ScheduleContainer extends Component {
   state = {

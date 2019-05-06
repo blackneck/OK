@@ -1,14 +1,14 @@
 import { Component } from 'react'
 import firebase from 'react-native-firebase'
 
-export default class NotificationManager extends Component {
+export default class NotificationsManager extends Component {
   async componentDidMount() {
     const enabled = await firebase.messaging().hasPermission()
     if (!enabled) await firebase.messaging().requestPermission()
 
     this.notificationListener = firebase
       .notifications()
-      .onNotification(notification => {
+      .onNotification((notification) => {
         firebase.notifications().displayNotification(notification)
       })
   }
