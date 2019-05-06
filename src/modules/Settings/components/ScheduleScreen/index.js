@@ -9,7 +9,7 @@ import {
   minutes,
   hours,
 } from 'app/constants/time&FrequencyLabels'
-import { DARK_LABEL } from 'common/styles/colors'
+import { GREY } from 'common/styles/colors'
 import styles from './styles'
 
 const scheduleScreen = ({
@@ -30,8 +30,8 @@ const scheduleScreen = ({
           data={hours}
           style={styles.timePicker}
           itemStyle={styles.iosPickerItem}
-          indicatorColor="#353535"
-          selectedItemTextColor={DARK_LABEL}
+          indicatorColor={GREY[2]}
+          selectedItemTextColor={GREY[1]}
           selectedItem={hour}
           onItemSelected={onHourSelected}
         />
@@ -40,8 +40,8 @@ const scheduleScreen = ({
           data={minutes}
           style={styles.timePicker}
           itemStyle={styles.iosPickerItem}
-          indicatorColor="#353535"
-          selectedItemTextColor={DARK_LABEL}
+          indicatorColor={GREY[2]}
+          selectedItemTextColor={GREY[1]}
           selectedItem={minute}
           onItemSelected={onMinuteSelected}
         />
@@ -55,8 +55,8 @@ const scheduleScreen = ({
         data={frequencyValues}
         style={styles.frequencyPicker}
         itemStyle={styles.iosPickerItem}
-        indicatorColor="#353535"
-        selectedItemTextColor={DARK_LABEL}
+        indicatorColor={GREY[2]}
+        selectedItemTextColor={GREY[1]}
         selectedItem={frequency}
         onItemSelected={onFrequencySelected}
       />

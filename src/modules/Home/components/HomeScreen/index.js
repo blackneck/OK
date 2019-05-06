@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, TouchableHighlight } from 'react-native'
 
+import { GREEN, BLUE } from 'common/styles/colors'
 import styles from './styles'
 
 export default ({ onSettingsPress, onCardPress }) => (
@@ -8,14 +9,14 @@ export default ({ onSettingsPress, onCardPress }) => (
     <TouchableHighlight
       style={styles.cardsSection}
       onPress={onCardPress}
-      underlayColor="#C7E8F3"
+      underlayColor={BLUE[0]}
     >
       <Text style={styles.sectionLabel}>Cards</Text>
     </TouchableHighlight>
     <TouchableHighlight
       style={styles.settingsSection}
       onPress={onSettingsPress}
-      underlayColor="#8CFBDE"
+      underlayColor={GREEN[0]}
     >
       <Text style={styles.sectionLabel}>Settings</Text>
     </TouchableHighlight>

@@ -1,23 +1,23 @@
 import { StyleSheet } from 'react-native'
-import { DARK_BACKGROUND, DARK_LABEL } from 'common/styles/colors'
+import { BLACK, GREY, PURPLE } from 'common/styles/colors'
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: DARK_BACKGROUND,
+    backgroundColor: BLACK[0],
   },
   cardsSection: {
     flex: 1,
-    backgroundColor: '#593f62',
+    backgroundColor: PURPLE[0],
   },
   settingsSection: {
     flex: 1,
-    backgroundColor: '#7b6d8d',
+    backgroundColor: PURPLE[1],
   },
   sectionLabel: {
     textAlign: 'right',
     textAlignVertical: 'center',
-    color: DARK_LABEL,
+    color: GREY[1],
     fontWeight: 'bold',
     fontSize: 150,
     lineHeight: 150,

@@ -3,13 +3,13 @@ import { StatusBar } from 'react-native'
 
 import NotificationsManager from 'common/NotificationsManager'
 import Navigator from 'app/navigation'
-import { DARK_FOREGROUND } from 'common/styles/colors'
+import { BLACK } from 'common/styles/colors'
 
 class App extends Component {
   render() {
     return (
       <NotificationsManager>
-        <StatusBar barStyle="light-content" backgroundColor={DARK_FOREGROUND} />
+        <StatusBar barStyle="light-content" backgroundColor={BLACK[1]} />
         <Navigator />
       </NotificationsManager>
     )

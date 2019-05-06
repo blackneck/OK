@@ -1,15 +1,11 @@
 import { StyleSheet, Platform } from 'react-native'
 
-import {
-  DARK_BACKGROUND,
-  DARK_FOREGROUND,
-  DARK_LABEL,
-} from 'common/styles/colors'
+import { BLACK, GREY, DANGER } from 'common/styles/colors'
 
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: DARK_BACKGROUND,
+    backgroundColor: BLACK[1],
   },
   frequencyPicker: {
     flex: 1,
@@ -22,7 +18,7 @@ export default StyleSheet.create({
     flex: 1,
   },
   iosPickerItem: {
-    color: DARK_LABEL,
+    color: GREY[1],
   },
   pickersContainer: {
     flex: 1,
@@ -35,17 +31,17 @@ export default StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 17,
-    color: DARK_LABEL,
+    color: GREY[1],
     fontWeight: '500',
   },
   section: {
     paddingVertical: 10,
-    backgroundColor: DARK_FOREGROUND,
+    backgroundColor: BLACK[1],
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     ...Platform.select({
-      android: { borderColor: '#353535' },
-      ios: { borderColor: '#141414' },
+      android: { borderColor: GREY[2] },
+      ios: { borderColor: BLACK[2] },
     }),
     alignItems: 'center',
   },
@@ -55,6 +51,6 @@ export default StyleSheet.create({
   },
   cancelLabel: {
     fontSize: 17,
-    color: '#fc3d39',
+    color: DANGER,
   },
 })

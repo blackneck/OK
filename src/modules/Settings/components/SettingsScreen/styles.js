@@ -1,16 +1,12 @@
 import { StyleSheet } from 'react-native'
 
-import {
-  DARK_BACKGROUND,
-  DARK_FOREGROUND,
-  DARK_LABEL,
-} from 'common/styles/colors'
+import { BLACK, GREY } from 'common/styles/colors'
 
 export default StyleSheet.create({
   container: {
     paddingTop: 40,
     flex: 1,
-    backgroundColor: DARK_BACKGROUND,
+    backgroundColor: BLACK[0],
   },
   settingsList: {
     flex: 1,
@@ -23,18 +19,18 @@ export default StyleSheet.create({
     paddingVertical: 10,
     paddingLeft: 30,
     paddingRight: 20,
-    backgroundColor: DARK_FOREGROUND,
+    backgroundColor: BLACK[1],
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: '#353535',
+    borderColor: GREY[2],
   },
   sectionLabel: {
-    color: DARK_LABEL,
+    color: GREY[1],
     fontSize: 17,
     fontWeight: '500',
   },
   iconRight: {
-    color: DARK_LABEL,
+    color: GREY[1],
     fontSize: 17,
   },
 })
