@@ -4,11 +4,7 @@ import { WheelPicker } from 'react-native-wheel-picker-android'
 import PropTypes from 'prop-types'
 
 import BackButton from 'common/HeaderBackButton'
-import {
-  frequencyValues,
-  minutes,
-  hours,
-} from 'app/constants/time&FrequencyLabels'
+import { FREQUENCY_VALUES, MINUTES, HOURS } from 'common/constants'
 import { GREY } from 'common/styles/colors'
 import styles from './styles'
 
@@ -27,7 +23,7 @@ const scheduleScreen = ({
       <View style={styles.pickersContainer}>
         <WheelPicker
           isCyclic
-          data={hours}
+          data={HOURS}
           style={styles.timePicker}
           itemStyle={styles.iosPickerItem}
           indicatorColor={GREY[2]}
@@ -37,7 +33,7 @@ const scheduleScreen = ({
         />
         <WheelPicker
           isCyclic
-          data={minutes}
+          data={MINUTES}
           style={styles.timePicker}
           itemStyle={styles.iosPickerItem}
           indicatorColor={GREY[2]}
@@ -52,7 +48,7 @@ const scheduleScreen = ({
         <Text style={styles.sectionTitle}>Repeat Every</Text>
       </View>
       <WheelPicker
-        data={frequencyValues}
+        data={FREQUENCY_VALUES}
         style={styles.frequencyPicker}
         itemStyle={styles.iosPickerItem}
         indicatorColor={GREY[2]}

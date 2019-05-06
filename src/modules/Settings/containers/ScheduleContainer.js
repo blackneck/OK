@@ -3,15 +3,15 @@ import React, { Component } from 'react'
 import ScheduleScreen from './../components/ScheduleScreen'
 import {
   scheduleNotification,
-  cancelNotifications
+  cancelNotifications,
 } from 'app/services/Scheduler'
-import { frequencyValues } from 'app/constants/time&FrequencyLabels'
+import { FREQUENCY_VALUES } from 'common/constants/'
 
 class ScheduleContainer extends Component {
   state = {
     hour: 0,
     minute: 0,
-    frequency: 0
+    frequency: 0,
   }
 
   componentDidMount() {
@@ -19,10 +19,10 @@ class ScheduleContainer extends Component {
     this.setState({
       hour: now.getHours(),
       minute: now.getMinutes(),
-      frequency: frequencyValues.indexOf('day')
+      frequency: FREQUENCY_VALUES.indexOf('day'),
     })
     this.props.navigation.setParams({
-      onSave: this.onSave
+      onSave: this.onSave,
     })
   }
 
@@ -36,15 +36,15 @@ class ScheduleContainer extends Component {
     this.props.navigation.goBack()
   }
 
-  onHourSelected = hour => {
+  onHourSelected = (hour) => {
     this.setState({ hour })
   }
 
-  onMinuteSelected = minute => {
+  onMinuteSelected = (minute) => {
     this.setState({ minute })
   }
 
-  onFrequencySelected = frequency => {
+  onFrequencySelected = (frequency) => {
     this.setState({ frequency })
   }
 
