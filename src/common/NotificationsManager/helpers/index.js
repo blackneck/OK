@@ -1,6 +1,6 @@
 import firebase from 'react-native-firebase'
 
-import { FREQUENCY_VALUES } from 'common/constants'
+import { FREQUENCY_VALUES } from 'modules/Settings/constants'
 
 export const scheduleNotification = ({ hour, minute, frequency }) => {
   const date = new Date()

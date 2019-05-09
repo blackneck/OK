@@ -4,7 +4,7 @@ import { WheelPicker } from 'react-native-wheel-picker-android'
 import PropTypes from 'prop-types'
 
 import BackButton from 'common/HeaderBackButton'
-import { FREQUENCY_VALUES, MINUTES, HOURS } from 'common/constants'
+import { FREQUENCY_VALUES, MINUTES, HOURS } from './../../constants'
 import { GREY } from 'common/styles/colors'
 import styles from './styles'
 

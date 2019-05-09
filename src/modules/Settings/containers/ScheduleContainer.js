@@ -5,7 +5,7 @@ import {
   scheduleNotification,
   cancelNotifications,
 } from 'common/NotificationsManager/helpers'
-import { FREQUENCY_VALUES } from 'common/constants/'
+import { FREQUENCY_VALUES } from '../constants'
 
 class ScheduleContainer extends Component {
   state = {
